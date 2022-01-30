@@ -1,0 +1,15 @@
+current directory: /Users/takanoakira/reactrailsapp/uber-eats-like/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.10.2/ext/bootsnap
+/Users/takanoakira/.rbenv/versions/2.6.0/bin/ruby -I /Users/takanoakira/.rbenv/versions/2.6.0/lib/ruby/site_ruby/2.6.0 -r ./siteconf20220131-97193-rslxbx.rb extconf.rb
+creating Makefile
+
+current directory: /Users/takanoakira/reactrailsapp/uber-eats-like/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.10.2/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/takanoakira/reactrailsapp/uber-eats-like/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.10.2/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/takanoakira/reactrailsapp/uber-eats-like/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.10.2/ext/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20220131-97193-1e3zs7x/bootsnap
