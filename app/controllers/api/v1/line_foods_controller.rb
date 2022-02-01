@@ -3,6 +3,24 @@ module Api
     class LineFoodsController < ApplicationController
       before_action :set_food, only: %i[create]
 
+      # 3-4で以下作成
+      def index
+        line_foods = LineFood.active
+        if line_foods.exists?
+          render json: {
+            line_food_ids: line_foods.map { |line_food| line_food.id },
+            restaurant: line_foods[0].restaurant,
+            count: line_foods.sum { |line_food| line_food[:count] },
+            # ここでtotal_amountが出る理由がわからない。
+            # 個数分のjsonが帰ってくるのでsumでtotal_amountがでるのだろうか？
+            amount: line_foods.sum { |line_food| line_food.total_amount },
+          }, status: :ok
+        else
+          render json: {}, status: :no_content
+        end
+      end
+
+      # 3-3で以下作成
       def create
         if LineFood.active.other_restaurant(@ordered_food.restaurant.id).exists?
           return render json: {
